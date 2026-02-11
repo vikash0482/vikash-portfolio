@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vikash Kumar | Portfolio</title>
+
+<style>
+
+/* GENERAL */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c5364;
+}
+
+/* NAVIGATION */
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.dark-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    margin-bottom: 25px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* PROJECT GRID */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.metrics {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #eef3f7;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.github-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #2c5364;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: #1b3945;
+}
+
+/* SKILLS */
+.skill-bar {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.skill {
+    height: 12px;
+    border-radius: 20px;
+    animation: fill 2s ease forwards;
+}
+
+.python { width: 85%; background: #3572A5; }
+.java { width: 80%; background: #6f42c1; }
+.cyber { width: 75%; background: #d73a49; }
+.web { width: 70%; background: #f1c40f; }
+
+@keyframes fill {
+    from { width: 0; }
+}
+
+/* RESUME BUTTON */
+.resume-btn {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 12px;
+    background-color: #2c5364;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #203a43;
+    color: white;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.dark-mode .card,
+.dark-mode .metrics {
+    background-color: #161b22;
+}
+
+.dark-mode footer {
+    background-color: #0d1117;
+}
+
+</style>
+</head>
+
+<body>
+
+<header id="home">
+    <nav class="navbar">
+        <div class="logo">Vikash</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+        <button onclick="toggleDarkMode()" class="dark-btn">🌙</button>
+    </nav>
+
+    <div class="hero">
+        <h1>Vikash Kumar</h1>
+        <p>AI Engineering Enthusiast | Cybersecurity Specialist</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            Computer Science student specializing in Cybersecurity at SRM University AP.
+            Passionate about Artificial Intelligence, Machine Learning, and building
+            secure scalable systems.
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <h2 id="skills">Skills</h2>
+    <div class="card">
+        <p>Python</p>
+        <div class="skill-bar"><div class="skill python"></div></div>
+
+        <p>Java</p>
+        <div class="skill-bar"><div class="skill java"></div></div>
+
+        <p>Cybersecurity</p>
+        <div class="skill-bar"><div class="skill cyber"></div></div>
+
+        <p>Web Development</p>
+        <div class="skill-bar"><div class="skill web"></div></div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <h2 id="experience">Work Experience</h2>
+    <div class="card">
+        <h3>Salesforce Developer Intern</h3>
+        <p><strong>Salesforce</strong> | Jun 2023 – Aug 2023</p>
+        <ul>
+            <li>Developed Apex logic & Lightning Web Components</li>
+            <li>Improved data entry efficiency by 15%</li>
+            <li>Worked on APIs, automation & debugging</li>
+        </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <h2 id="projects">Projects</h2>
+    <div class="projects">
+
+        <div class="card">
+            <h3>Enhancing Fake News Detection</h3>
+            <p>Built ML models using FastText, CNN, BERT, RoBERTa & XLNet with SHAP explainability.</p>
+            <div class="metrics">📊 Compared 4 transformer models | 🔍 Top 10 feature explainability</div>
+            <a href="https://github.com/vikash0482" target="_blank" class="github-btn">🔗 View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Chat Amigo</h3>
+            <p>Real-time chat application with authentication & file attachments.</p>
+            <div class="metrics">🚀 95% Satisfaction | ⚡ 40% Faster Load Time</div>
+            <a href="https://github.com/vikash0482" target="_blank" class="github-btn">🔗 View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Threat Modelling & Analysis</h3>
+            <p>Conducted supply chain threat modeling and built detection models using Python.</p>
+            <div class="metrics">🔐 30% Resilience Improvement | 🎯 10 High-Risk Threats</div>
+            <a href="https://github.com/vikash0482" target="_blank" class="github-btn">🔗 View Project</a>
+        </div>
+
+    </div>
+
+    <!-- RESUME -->
+    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+
+</div>
+
+<footer>
+    <p>📧 gujjaruvikash@gmail.com</p>
+    <p>
+        <a href="https://github.com/vikash0482" target="_blank" style="color:gold;">GitHub</a> |
+        <a href="https://linkedin.com/in/vikash-kumar-b1717a24b" target="_blank" style="color:gold;">LinkedIn</a>
+    </p>
+</footer>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
