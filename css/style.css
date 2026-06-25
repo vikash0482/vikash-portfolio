@@ -35,6 +35,8 @@ position:sticky;
 
 top:0;
 
+width: 100%;
+
 z-index:1000;
 
 background:rgba(15,23,42,0.8);
@@ -49,21 +51,16 @@ border-bottom:
 
 
 nav{
+    width:100%;
+    max-width:1400px;
+    height:80px;
+    padding:0 40px;
 
-width:85%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-max-width:1400px;
-
-height:80px;
-
-margin:auto;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+    box-sizing:border-box;
 }
 
 
